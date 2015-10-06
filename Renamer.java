@@ -98,8 +98,11 @@ class Renamer {
 				fileName = this.simplifyName(fileName);
 				String se = "(.+?)([s]{0,1})([0-9]{1,2})([ex]{1})([0-9]{1,2})(.*?)";
 				if (!Pattern.matches(se, fileName)) {
-					this.appendOutput("Skipping file...");
-					continue;
+					se = "(.+?)(([0-9]{1,2}))(([0-9]{2}))(.*?)";
+					if (!Pattern.matches(se, fileName)) {
+						this.appendOutput("Skipping file...");
+						continue;
+					}
 				}
 				Pattern p = Pattern.compile(se);
 				Matcher m = p.matcher(fileName);

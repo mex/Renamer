@@ -5,7 +5,7 @@ Small Java app for formatting the file names of TV shows in the following format
 
 **Example:** `Game of Thrones - s01e01 - Winter Is Coming`
 
-It will process all files in the current directory, but will skip all files not matching the reference file (see below) or matching files with an invalid name. A file name has to include a season and an episode number separated by `e` or `x`. The only exception to this are David Letterman and The Daily Show, which uses dates as episode identifiers, which are currently hardcoded into the app.
+It will process all files in the current directory, but will skip all files not matching the reference file (see below) or matching files with an invalid name. A file name has to include a season and an episode number, optionally separated by `e` or `x`. The only exception to this are David Letterman, The Daily Show, and Jimmy Fallon, which uses dates as episode identifiers (these three shows are currently hardcoded into the app).
 
 ##Source
 The app uses [IMDb](http://imdb.com/) to provide episode titles and requires a text file containing references to show name, simplified show name (lower cased and dots replaced with spaces) and the IMDb ID.
